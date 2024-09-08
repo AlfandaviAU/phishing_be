@@ -69,6 +69,10 @@ app.get("/list", (req, res) => {
   });
 });
 
+app.get("/ping", (req, res) => {
+  res.status(200).json({ message: "pong" });
+});
+
 // Start the server
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
