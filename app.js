@@ -6,6 +6,7 @@ const app = express();
 // Use body-parser to parse JSON bodies
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(cors());
 
 // Route to handle login data
 app.post("/login", (req, res) => {
